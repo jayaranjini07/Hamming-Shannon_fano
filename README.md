@@ -5,19 +5,41 @@ Apply the Huffman and Shannon-Fano to this source.
 Show that by drawing the tree diagram, and 
 Calculate the average code word length, entropy, variance, redundancy, and efficiency.
 # Tools Required:
+Google colab
 # Program:
 ```
-Write the program 
-```
-# Calculation:
-```
-Compare the manually calculated value and the observed practical value.
+import math
+
+p = [0.55,0.15,0.15,0.1,0.005]
+lk = [3, 4, 2, 4, 3, 3, 2]
+n = len(p)
+
+# Average Codeword Length
+L = sum(p[k] * lk[k] for k in range(n))
+
+# Entropy
+hs = sum(p[k] * math.log(1 / p[k], 2) for k in range(n))
+hs = round(hs, 3)
+
+# Efficiency
+eff = round(hs / L, 3)
+
+# Redundancy
+red = round(1 - eff, 3)
+
+# Variance
+var = sum(p[k] * (lk[k] - L) ** 2 for k in range(n))
+var = round(var, 3)
+
+# Output
+print(f"Average Codeword Length is : {L}")
+print(f"Entropy is : {hs}")
+print(f"Efficiency is : {eff * 100}%")
+print(f"Redundancy is : {red}")
+print(f"Variance is : {var}")
 ```
 # Output
-```
-Attach the Output waveform
-``` 
+<img width="466" height="131" alt="image" src="https://github.com/user-attachments/assets/656d3887-4eec-4b79-ba19-6f3c3d204859" />
+
 # Results:
-```
-Write the conclusion
-```
+The experiment was successfully executed.
