@@ -38,6 +38,8 @@ print(f"Efficiency is : {eff * 100}%")
 print(f"Redundancy is : {red}")
 print(f"Variance is : {var}")
 ```
+![WhatsApp Image 2025-09-20 at 15 34 41_f46832e9](https://github.com/user-attachments/assets/cce9d728-ca7c-47a2-9dae-cecdab4569ca)
+
 # Output
 <img width="466" height="131" alt="image" src="https://github.com/user-attachments/assets/656d3887-4eec-4b79-ba19-6f3c3d204859" />
 
